@@ -1,0 +1,259 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{makecell}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% pdfTeX-only: keep the PDF ATS-parsable; skipped under XeLaTeX/LuaLaTeX
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+\fi
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{%
+    {#1\vspace{-2pt}}%
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+\raggedbottom
+
+%----------HEADER----------
+\begin{center}
+    \textbf{\LARGE \scshape Zhenhao Zhang} \\ \vspace{2pt}
+    \small New York, NY $|$ (585) 470-3118 $|$ \href{mailto:zz3530@columbia.edu}{zz3530@columbia.edu} $|$
+    \href{https://www.linkedin.com/in/zhenhao-zhang-uofr/}{LinkedIn} $|$
+    \href{https://github.com/X0X0X00}{GitHub} \\ \vspace{2pt}
+    \small AI Agents $\cdot$ Multimodal Learning $\cdot$ Reinforcement Learning $\cdot$ Computer-Use Agents
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Columbia University}{New York, NY}
+    {M.S. in Artificial Intelligence; Concentration: AI and Advanced Computing}{Aug. 2026 -- Dec. 2028 (Expected)}
+  \resumeSubheading
+    {University of Rochester}{Rochester, NY}
+    {B.S. in Computer Science; B.S. in Business: Information Systems}{Aug. 2022 -- Dec. 2025}
+  \resumeItemListStart
+    \resumeItem{GPA: \textbf{3.85/4.00}; Cum Laude (Computer Science \& Business Information Systems); Highest Distinction in Computer Science; Dean's List (2023--2025)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Selected Publications}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\href{https://arxiv.org/abs/2602.03664}{Mitigating Conversational Inertia in Multi-Turn Agents}}{\textbf{ICML 2026}}
+  \resumeProjectHeading
+    {\href{https://arxiv.org/abs/2607.23263}{SeekJudge: A Practical Reward Framework for Reinforcement Learning in Computer-Use Agents}}{\textbf{arXiv, 2026}}
+  \resumeProjectHeading
+    {\href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6727981}{Political Symbols and Urban Amenities: The Spatial Logic of Flag Placement in Istanbul}}{\textbf{SSRN, 2026}}
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Zhejiang University, College of Computer Science and Technology}{Hangzhou, China / Hybrid}
+    {Researcher; Supervisor: Dr. Linchao Zhu}{Feb. 2025 -- Present}
+
+  \resumeSubSubheading
+    {\textbf{Computer-Use CAPTCHA Agents} $|$ Lead Researcher}{Jan. 2026 -- Present}
+  \resumeItemListStart
+    \resumeItem{Led development of an interactive multimodal benchmark and training environment with \textbf{50K CAPTCHA instances} across \textbf{20 task categories} and 5 interaction patterns, using mouse/keyboard actions and executable browser-verified ground truth.}
+    \resumeItem{Designed an answer-conditioned reasoning distillation pipeline for \textbf{46K multi-turn trajectories}, integrating step-level reasoning supervision, symbol-to-pixel grounding, persistent PLAN/STATE memory, and independent VLM quality filtering.}
+    \resumeItem{Trained a unified \textbf{Qwen3.5-9B} multimodal agent across all 20 task categories on a 37K+ per-turn SFT corpus, experimenting with LoRA, full-parameter fine-tuning, frozen vision encoders, 32K contexts, and multi-task data scheduling.}
+    \resumeItem{Engineered large-scale multimodal SFT/GRPO training infrastructure with DeepSpeed ZeRO-3, Liger FLCE, distributed checkpointing, executable environment rewards, and custom memory optimizations for long-context training with a 248K-token vocabulary.}
+  \resumeItemListEnd
+
+  \resumeSubSubheading
+    {\textbf{SeekJudge} $|$ Computer-Use Agent Reward Modeling $|$ arXiv 2026}{Jan. 2026 -- Aug. 2026}
+  \resumeItemListStart
+    \resumeItem{Built and manually annotated a \textbf{300+ trajectory} cross-platform benchmark for long-horizon computer-use agents, with trajectory-level verdicts and dense step-level supervision across web, desktop, and mobile environments.}
+    \resumeItem{Designed fine-grained reward criteria covering milestones, correct decisions, error correction, off-path behavior, and harmful actions; conducted human evaluation and model-vs.-human disagreement analysis at the step level.}
+    \resumeItem{Performed systematic error analysis of rule-based and model-based reward signals, identifying rule--human disagreement across multiple CUA environments and motivating learned reward models for long-horizon agent evaluation.}
+    \resumeItem{Contributed to distillation and SFT training of \textbf{SeekJudge-9B}, analyzing reasoning, formatting, and termination failure modes and iterating on training data and supervision strategies.}
+  \resumeItemListEnd
+
+  \resumeSubSubheading
+    {\textbf{Agent Memory / Conversational Inertia} $|$ ICML 2026}{Feb. 2025 -- Aug. 2026}
+  \resumeItemListStart
+    \resumeItem{Implemented task-specific trajectory summarization for long-horizon LLM agents across Maze, WebShop, Wordle, SciWorld, and TextCraft, compressing multi-turn observation-action histories while preserving task-critical state and progress.}
+    \resumeItem{Designed environment-aware memory representations and summarization prompts, selectively retaining navigation state, completed subgoals, constraints, prior actions, and unresolved information for downstream agent decision-making.}
+    \resumeItem{Benchmarked summarization against alternative context-management strategies across heterogeneous \textbf{AgentGym} environments, analyzing the trade-off between history retention and conversational inertia; training-free summary prompts improved Maze success from 85.5\% to \textbf{90.0\%}.}
+    \resumeItem{Conducted failure and behavioral analysis of long-context agents, building attention diagnostics that link system-token ratio $\rightarrow$ system attention $\rightarrow$ task success, and studying action repetition, exploration, and error propagation.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------INDUSTRY EXPERIENCE-----------
+\section{Industry Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Merit Interactive Co., Ltd.}{Hangzhou, China}
+    {AI Engineer Intern}{Jan. 2026 -- Mar. 2026}
+  \resumeItemListStart
+    \resumeItem{Designed an end-to-end multimodal retrieval system over \textbf{770K+ images}, supporting text-to-image and image-to-image search through FAISS ANN retrieval, reranking, and score fusion, with \textbf{$<$50 ms} vector recall and $\sim$100--500 ms end-to-end query latency.}
+    \resumeItem{Built a multilingual webpage classification pipeline across 8 topic domains; labeled $\sim$6K pages, curated 7.5K+ samples, and benchmarked \textbf{13 approaches} spanning embedding classifiers, contrastive learning, LoRA, clustering, and retrieval/reranking.}
+    \resumeItem{Improved classification from 62.5\% to \textbf{87.75\% Top-1} (97.6\% Top-2) and deployed the final lightweight 264 KB model as a containerized REST API.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Merit Interactive Co., Ltd.}{Hangzhou, China}
+    {Algorithm Intern}{Jul. 2024 -- Aug. 2024}
+  \resumeItemListStart
+    \resumeItem{Built mobile-app analytics datasets from raw user logs with SQL; analyzed usage, installation, uninstallation, user distribution, and temporal trends and automated Top-100 ranking reports.}
+    \resumeItem{Developed app-trend forecasting models using Logistic Regression and LightGBM with behavioral and temporal features to predict applications likely to trend in the following week.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ADDITIONAL RESEARCH & TEACHING-----------
+\section{Additional Research \& Teaching}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {University of Rochester, Goergen Institute for Data Science and AI}{Rochester, NY}
+    {DSCC 279 Independent Research; Supervisor: Prof. Cantay \c{C}al{\i}\c{s}kan}{Aug. 2025 -- Jan. 2026}
+  \resumeItemListStart
+    \resumeItem{Built a geospatial vision pipeline over $\sim$\textbf{748K Google Street View panoramas}, including image cleaning, coordinate alignment, spatial matching, multi-scale geographic aggregation, and district-level feature construction.}
+    \resumeItem{Applied nested geographic buffers, distance-weighted aggregation, and Earth Mover's Distance to quantify structural differences in political-symbol visibility across urban districts.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {University of Rochester, Department of Computer Science}{Rochester, NY}
+    {Undergraduate Teaching Assistant, CSC 280: Computer Models and Limitations}{Aug. 2025 -- Dec. 2025}
+
+\resumeSubHeadingListEnd
+
+%-----------SELECTED PROJECTS & AWARDS-----------
+\section{Selected Projects \& Awards}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{GIDS Biomedical Data Science Hackathon} $|$ \textit{Prize Winner}}{Aug. 2026}
+  \resumeItemListStart
+    \resumeItem{\textit{MERFISH cell-type classification:} led the modeling pipeline for 60-class cell-type prediction on mouse spinal-cord data (200 genes, 5K labelled cells): seed-bagged LightGBM ensembles over expression, PCA, and spatial/expression-neighbour label features with biological constraint masks and a leakage-free CV protocol; placed \textbf{3rd of 30 teams} with \textbf{80.7\%} accuracy (majority-class baseline 14\%).}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{GIDS Biomedical Data Science Hackathon} $|$ \textit{Prize Winner}}{Aug. 2025}
+  \resumeItemListStart
+    \resumeItem{\textit{Perturb-seq gene expression prediction:} developed an enhanced Norman-method pipeline for single/double perturbation prediction using robust preprocessing, multi-model regression, and adaptive coefficient estimation; achieved \textbf{RMSD 0.40} on the test set.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{GIDS Biomedical Data Science Hackathon} $|$ \textit{Prize Winner}}{Aug. 2024}
+  \resumeItemListStart
+    \resumeItem{\textit{Single-cell multiome modeling:} built an MLP-based peak-to-gene prediction pipeline, achieving \textbf{75\% accuracy} and outperforming baseline linear and random-forest models.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Finnov8 Hackathon} $|$ \textit{Second Best Overall Award}}{Mar. 2024}
+  \resumeItemListStart
+    \resumeItem{Achieved an individual score of \textbf{0.67} in a 4-member team and improved prediction from 0.60 to 0.67 using feature engineering, Multi-Output MLP, and LSTM models.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Minister of Publicity}, University of Rochester CSSA}{Jun. 2024 -- Jul. 2025}
+  \resumeProjectHeading
+    {\textbf{Member, External Relations Department}, University of Rochester CSSA}{Jun. 2023 -- May 2024}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    {\sl Languages:} Python, C/C++, Java, SQL, JavaScript/HTML/CSS \\
+    {\sl ML/AI:} PyTorch, Hugging Face Transformers, Scikit-learn, FAISS, LoRA, SFT, GRPO, multimodal/VLM training \\
+    {\sl Systems/Tools:} DeepSpeed ZeRO-3, Docker, Linux, Git, REST APIs, distributed training and checkpointing
+  }}
+\end{itemize}
+
+\end{document}
