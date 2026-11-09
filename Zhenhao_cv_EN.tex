@@ -35,7 +35,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.25in}
 
 \urlstyle{same}
 \raggedbottom
@@ -109,7 +109,7 @@
 \resumeSubHeadingListStart
   \resumeSubheading
     {Columbia University}{New York, NY}
-    {M.S. in Artificial Intelligence; Concentration: AI and Advanced Computing}{Aug. 2026 -- Dec. 2028 (Expected)}
+    {M.S. in Artificial Intelligence; Concentration: AI and Advanced Computing}{Aug. 2026 -- Dec. 2027 (Expected)}
   \resumeSubheading
     {University of Rochester}{Rochester, NY}
     {B.S. in Computer Science; B.S. in Business: Information Systems}{Aug. 2022 -- Dec. 2025}
@@ -121,6 +121,8 @@
 %-----------PUBLICATIONS-----------
 \section{Selected Publications}
 \resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\href{https://arxiv.org/abs/2609.31957}{\makecell[l]{CaptchaArena: A Large-Scale, Fine-Grained Dataset for Training Computer-Use Agents\\on Interactive CAPTCHAs}}}{\textbf{arXiv, 2026}}
   \resumeProjectHeading
     {\href{https://arxiv.org/abs/2602.03664}{Mitigating Conversational Inertia in Multi-Turn Agents}}{\textbf{ICML 2026}}
   \resumeProjectHeading
@@ -138,12 +140,12 @@
     {Researcher; Supervisor: Dr. Linchao Zhu}{Feb. 2025 -- Present}
 
   \resumeSubSubheading
-    {\textbf{Computer-Use CAPTCHA Agents} $|$ Lead Researcher}{Jan. 2026 -- Present}
+    {\textbf{CaptchaArena} $|$ Project Lead \& First Author $|$ arXiv 2026}{Jan. 2026 -- Present}
   \resumeItemListStart
-    \resumeItem{Led development of an interactive multimodal benchmark and training environment with \textbf{50K CAPTCHA instances} across \textbf{20 task categories} and 5 interaction patterns, using mouse/keyboard actions and executable browser-verified ground truth.}
-    \resumeItem{Designed an answer-conditioned reasoning distillation pipeline for \textbf{46K multi-turn trajectories}, integrating step-level reasoning supervision, symbol-to-pixel grounding, persistent PLAN/STATE memory, and independent VLM quality filtering.}
-    \resumeItem{Trained a unified \textbf{Qwen3.5-9B} multimodal agent across all 20 task categories on a 37K+ per-turn SFT corpus, experimenting with LoRA, full-parameter fine-tuning, frozen vision encoders, 32K contexts, and multi-task data scheduling.}
-    \resumeItem{Engineered large-scale multimodal SFT/GRPO training infrastructure with DeepSpeed ZeRO-3, Liger FLCE, distributed checkpointing, executable environment rewards, and custom memory optimizations for long-context training with a 248K-token vocabulary.}
+    \resumeItem{Led \textbf{CaptchaArena}, the first large-scale, fine-grained training dataset for interactive CAPTCHA solving, with \textbf{50K puzzles} across \textbf{20 task types} and 5 interaction modes, low-level mouse/keyboard actions, browser-executable ground truth, and 50K replay-verified screenshot-action trajectories.}
+    \resumeItem{Built the dataset's reasoning supervision pipeline, distilling \textbf{46K multi-turn trajectories} with action-conditioned per-step visual reasoning, pixel-level grounding, independent VLM-based double judging, stronger-model fallback, and human review.}
+    \resumeItem{Trained \textbf{CaptchaAgent}, a unified Qwen3.5-9B computer-use policy across all 20 task types with no task-specific adapters, using 37,621 per-turn SFT samples followed by GRPO; improved Pass@1 from 11.4\% $\rightarrow$ 70.5\% $\rightarrow$ \textbf{71.7\%} from base model to SFT and RL.}
+    \resumeItem{Engineered distributed multimodal SFT/RL infrastructure with ZeRO-3/FSDP, asynchronous browser rollouts, 32K-token contexts, and executable environment rewards, enabling on-policy GRPO without a learned reward model or human reward annotations; RL further improved transfer on two external CAPTCHA benchmarks.}
   \resumeItemListEnd
 
   \resumeSubSubheading
@@ -183,8 +185,7 @@
     {Merit Interactive Co., Ltd.}{Hangzhou, China}
     {Algorithm Intern}{Jul. 2024 -- Aug. 2024}
   \resumeItemListStart
-    \resumeItem{Built mobile-app analytics datasets from raw user logs with SQL; analyzed usage, installation, uninstallation, user distribution, and temporal trends and automated Top-100 ranking reports.}
-    \resumeItem{Developed app-trend forecasting models using Logistic Regression and LightGBM with behavioral and temporal features to predict applications likely to trend in the following week.}
+    \resumeItem{Built mobile-app analytics datasets from raw user logs with SQL, automating Top-100 installation and uninstallation rankings; developed Logistic Regression and LightGBM models forecasting next-week trending applications.}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -208,13 +209,13 @@
 \resumeSubHeadingListEnd
 
 %-----------SELECTED PROJECTS & AWARDS-----------
-\section{Selected Projects \& Awards}
+\section{Competitions \& Awards}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
     {\textbf{GIDS Biomedical Data Science Hackathon} $|$ \textit{Prize Winner}}{Aug. 2026}
   \resumeItemListStart
-    \resumeItem{\textit{MERFISH cell-type classification:} led the modeling pipeline for 60-class cell-type prediction on mouse spinal-cord data (200 genes, 5K labelled cells): seed-bagged LightGBM ensembles over expression, PCA, and spatial/expression-neighbour label features with biological constraint masks and a leakage-free CV protocol; placed \textbf{3rd of 30 teams} with \textbf{80.7\%} accuracy (majority-class baseline 14\%).}
+    \resumeItem{\textit{MERFISH cell-type classification:} led the modeling pipeline for 60-class cell-type prediction on mouse spinal-cord data (200 genes, 5K labelled cells): seed-bagged LightGBM ensembles over expression, PCA, and spatial/expression-neighbour label features with biological constraint masks and a leakage-free CV protocol; won \textbf{2nd place} of 30 teams with \textbf{80.7\%} accuracy (baseline 14\%).}
   \resumeItemListEnd
 
   \resumeProjectHeading
@@ -241,9 +242,7 @@
 \section{Leadership}
 \resumeSubHeadingListStart
   \resumeProjectHeading
-    {\textbf{Minister of Publicity}, University of Rochester CSSA}{Jun. 2024 -- Jul. 2025}
-  \resumeProjectHeading
-    {\textbf{Member, External Relations Department}, University of Rochester CSSA}{Jun. 2023 -- May 2024}
+    {\textbf{University of Rochester CSSA} $|$ Minister of Publicity (2024--2025); Member, External Relations (2023--2024)}{}
 \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------

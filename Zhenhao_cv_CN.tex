@@ -100,7 +100,7 @@
 \resumeSubHeadingListStart
   \resumeSubheading
     {哥伦比亚大学 (Columbia University)}{纽约, NY}
-    {人工智能硕士 (M.S. in Artificial Intelligence)；方向：AI 与高级计算}{2026.08 -- 2028.12（预计）}
+    {人工智能硕士 (M.S. in Artificial Intelligence)；方向：AI 与高级计算}{2026.08 -- 2027.12（预计）}
   \resumeSubheading
     {罗切斯特大学 (University of Rochester)}{罗切斯特, NY}
     {计算机科学理学学士；商学（信息系统）理学学士（双学位）}{2022.08 -- 2025.12}
@@ -112,6 +112,8 @@
 %-----------PUBLICATIONS-----------
 \section{论文发表}
 \resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\href{https://arxiv.org/abs/2609.31957}{\makecell[l]{CaptchaArena: A Large-Scale, Fine-Grained Dataset for Training Computer-Use Agents\\on Interactive CAPTCHAs}}}{\textbf{arXiv, 2026}}
   \resumeProjectHeading
     {\href{https://arxiv.org/abs/2602.03664}{Mitigating Conversational Inertia in Multi-Turn Agents}}{\textbf{ICML 2026}}
   \resumeProjectHeading
@@ -129,12 +131,12 @@
     {科研研究员；导师：朱霖潮 (Dr. Linchao Zhu)}{2025.02 -- 至今}
 
   \resumeSubSubheading
-    {\textbf{Computer-Use CAPTCHA Agents（计算机操作验证码智能体）} $|$ 项目负责人}{2026.01 -- 至今}
+    {\textbf{CaptchaArena} $|$ 项目负责人 \& 一作 $|$ arXiv 2026}{2026.01 -- 至今}
   \resumeItemListStart
-    \resumeItem{主导构建交互式多模态基准与训练环境，涵盖 \textbf{5 万个 CAPTCHA 实例}、\textbf{20 类任务}和 5 种交互模式，基于鼠标/键盘底层操作与浏览器可执行验证的真值标注。}
-    \resumeItem{设计答案条件化的推理蒸馏数据管线，生成 \textbf{4.6 万条多轮轨迹}，融合步级推理监督、符号到像素的坐标对齐 (grounding)、持久化 PLAN/STATE 记忆以及独立的 VLM 质量过滤。}
-    \resumeItem{在 3.7 万+ 逐轮 SFT 语料上训练统一的 \textbf{Qwen3.5-9B} 多模态智能体，覆盖全部 20 类任务，实验对比 LoRA、全参数微调、冻结视觉编码器、32K 上下文与多任务数据调度。}
-    \resumeItem{搭建大规模多模态 SFT/GRPO 训练基础设施：DeepSpeed ZeRO-3、Liger FLCE、分布式检查点、可执行环境奖励，以及面向 24.8 万词表长上下文训练的显存优化。}
+    \resumeItem{主导 \textbf{CaptchaArena}——首个大规模细粒度交互式 CAPTCHA 训练数据集：\textbf{5 万道谜题}、\textbf{20 类任务}、5 种交互模式，包含鼠标/键盘底层操作、浏览器可执行真值与 5 万条回放验证的截图—动作轨迹。}
+    \resumeItem{构建数据集的推理监督管线，蒸馏 \textbf{4.6 万条多轮轨迹}：动作条件化的逐步视觉推理、像素级 grounding、独立 VLM 双重评审、强模型兜底与人工复核。}
+    \resumeItem{训练 \textbf{CaptchaAgent}——统一 Qwen3.5-9B 计算机操作策略，覆盖全部 20 类任务且无任务专用适配器；基于 37,621 条逐轮 SFT 样本 + GRPO，Pass@1 从 11.4\% 提升至 70.5\% 再至 \textbf{71.7\%}（基座 $\rightarrow$ SFT $\rightarrow$ RL）。}
+    \resumeItem{搭建分布式多模态 SFT/RL 基础设施：ZeRO-3/FSDP、异步浏览器 rollout、32K 上下文与可执行环境奖励，无需学习型奖励模型与人工奖励标注即可在线 GRPO；RL 进一步提升两个外部 CAPTCHA 基准上的迁移表现。}
   \resumeItemListEnd
 
   \resumeSubSubheading
@@ -199,13 +201,13 @@
 \resumeSubHeadingListEnd
 
 %-----------SELECTED PROJECTS & AWARDS-----------
-\section{项目与奖项}
+\section{竞赛与奖项}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
     {\textbf{GIDS 生物医学数据科学黑客松} $|$ \textit{获奖}}{2026.08}
   \resumeItemListStart
-    \resumeItem{\textit{MERFISH 空间转录组细胞类型分类：}主导建模管线，在小鼠脊髓数据（200 个基因、仅 5 千标注细胞）上预测 60 类细胞类型，基于表达、PCA 与空间/表达近邻标签特征构建种子 bagging 的 LightGBM 集成，引入生物学约束掩码与无泄漏交叉验证；在 30 支队伍中排名\textbf{第 3}，准确率 \textbf{80.7\%}（多数类基线 14\%）。}
+    \resumeItem{\textit{MERFISH 空间转录组细胞类型分类：}主导建模管线，在小鼠脊髓数据（200 个基因、仅 5 千标注细胞）上预测 60 类细胞类型，基于表达、PCA 与空间/表达近邻标签特征构建种子 bagging 的 LightGBM 集成，引入生物学约束掩码与无泄漏交叉验证；在最终验证集排名中获\textbf{第 2 名}（共 30 队），公开榜单准确率 \textbf{80.7\%}（多数类基线 14\%）。}
   \resumeItemListEnd
 
   \resumeProjectHeading
